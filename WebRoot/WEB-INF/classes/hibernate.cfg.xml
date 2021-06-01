@@ -3,10 +3,10 @@
 	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
-	<session-factory name="hibernateTest">
+	<session-factory name="myhibernateTestDemo">
 		<!-- 配置数据库信息 -->
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-		<property name="connection.url">jdbc:mysql:///hibernateTest</property>
+		<property name="connection.url">jdbc:mysql:///hibernatetest</property>
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="connection.username">root</property>
 		<property name="hibernate.connection.password">root</property>
@@ -20,7 +20,7 @@
 
 
 		<!-- 导入映射文件 <mapping resource="cn/itcast/a_helloworld/User.hbm.xml"/> -->
-
+		<mapping resource="com/zkj/hibernate/entity/TestUser.hbm.xml" />
 
 
 	</session-factory>
