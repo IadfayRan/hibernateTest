@@ -24,10 +24,10 @@ public class AddUser {
 		TestUser user = new TestUser();
 		user.setName("zkj");
 		user.setAge(25);
-		DateFormat df = new SimpleDateFormat("yyyy-mm-dd");
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		Date date = null;
 		try {
-			date = df.parse("1992-00-00");
+			date = df.parse("1992-01-01 01:11:11");
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}

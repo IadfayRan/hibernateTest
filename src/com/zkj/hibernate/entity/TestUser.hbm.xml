@@ -10,21 +10,21 @@
 		<id name="pkId" type="int" column="pkid">
 			<generator class="native" />
 		</id>
-		<!-- 普通的属性（数据库中的基本类型，如字符串、日期、数字等） name属性：对象中的属性名，必须要有。 type属性：类型，如果不写，Hibernate会自动检测。 
-			可以写Java中类的全名。 或是写hibernate类型。 column属性：对应表中的列名，如果没有，默认为属性名。 length属性：长度，不是所有的类型都有长度属性，比如varchar有，但int没有，如果不写默认为255 
-			not-null属性：非空约束，默认为false -->
+		<!-- 普通的属性（数据库中的基本类型，如字符串、日期、数字等） name属性：对象中的属性名， 必须要有。 type属性：类型，如果不写，Hibernate会自动检测。 
+			可以写Java中类的全名。 或是写hibernate类型。 column属性：对应表中的列名， 如果没有，默认为属性名。 length属性：长度，不是所有的类型都有长度属性，比如varchar有， 
+			但int没有，如果不写默认为255 not-null属性：非空约束，默认为false -->
 		<!-- <property name="name"/> -->
 		<property name="name" type="string" column="name" length="20"
 			not-null="true" />
 
 		<property name="age" type="int" column="age" />
 
-		<property name="birthday" type="date" column="birthday" />
+		<property name="birthday" type="timestamp" column="birthday" />
 
 		<!-- 当列表与关键字冲突时，可以通过column属性指定一个其他的列名。 或是使用反引号包围起来。 指定使用text类型时，最好再指定length，以确定生成的SQL类型是能够存放指定数量的字符的。 
 			<property name="desc"> <column name="desc_" length="5000" sql-type="text"/> 
 			</property> -->
-		
+
 
 		<!-- 头像，二进制类型，最好指定长度 -->
 		<property name="photo" type="binary" length="102400"></property>
